@@ -17,7 +17,6 @@ import ColorStack from "./ColorStack";
 import Titles from "./Titles";
 
 const Background = ({ nobg, setBg }) => {
-  const colors = pureColors[0].color;
   const grays = pureColors[1].gray;
   const reds = pureColors[2].red;
   const oranges = pureColors[3].orange;
