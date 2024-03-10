@@ -8,10 +8,10 @@ import girl_3 from "../assets/girl_3.png";
 import girl_4 from "../assets/girl_4.png";
 import girl_5 from "../assets/girl_5.png";
 import girl_6 from "../assets/girl_6.png";
+import girl_7 from "../assets/girl_7.png";
 import girl_8 from "../assets/girl_8.png";
 import girl_9 from "../assets/girl_9.png";
 import man from "../assets/man.png";
-import toy_3 from "../assets/toy_3.png";
 import pureColors from "../data/pureColors";
 import ColorStack from "./ColorStack";
 import Titles from "./Titles";
@@ -58,7 +58,7 @@ const Background = ({ nobg, setBg }) => {
           color={grays}
           nobg={nobg}
           setBg={setBg}
-          photo={toy_3}
+          photo={cat}
         />
         <Titles icon={IoSquare} title="ORANGE" color="orange.300" />
         <ColorStack
@@ -76,7 +76,7 @@ const Background = ({ nobg, setBg }) => {
           color={yellows}
           nobg={nobg}
           setBg={setBg}
-          photo={cat}
+          photo={man}
         />
         <Titles icon={IoSquare} title="GREEN" color="green.300" />
         <ColorStack
@@ -85,7 +85,7 @@ const Background = ({ nobg, setBg }) => {
           color={greens}
           nobg={nobg}
           setBg={setBg}
-          photo={man}
+          photo={girl_7}
         />
         <Titles icon={IoSquare} title="TEAL" color="teal.300" />
         <ColorStack
