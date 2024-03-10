@@ -11,7 +11,7 @@ const Header = () => {
           <HStack>
             <Icon as={HiSquare2Stack} boxSize="45px" color="green.400" />
             <Text fontSize="lg" letterSpacing="wide" m={1}>
-              ID ROOM
+              Q2 STUDIO
             </Text>
           </HStack>
         </Link>
