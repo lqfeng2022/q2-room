@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, GridItem, Center } from "@chakra-ui/react";
+import { Grid, GridItem, Center, useColorMode } from "@chakra-ui/react";
 import PhotoBox from "./components/PhotoBox";
 import UploadImage from "./components/UploadImage";
 import Shapes from "./components/Shapes";
@@ -13,9 +13,11 @@ const HomePage = () => {
   const [height, setHeight] = useState("200px");
   const [per, setPer] = useState("90%");
 
+  const { colorMode, toggleColorMode } = useColorMode();
+
   const onSubmit = async () => {
     const apiKey = "C9w3gdt7xjt42juKAQnMJ1JK";
-    const url = "https://api.remove.bg/v1.0/removebg";
+    const url = "https://api.remove.bg/v1.0/removebg"; 
 
     const formData = new FormData();
     formData.append("image_file", image, image.name);
@@ -37,7 +39,10 @@ const HomePage = () => {
 
   return (
     <Grid templateAreas={`"upload" "templates"`}>
-      <GridItem area="upload" bg="gray.200">
+      <GridItem
+        area="upload"
+        bg={colorMode === "light" ? "gray.200" : "gray.700"}
+      >
         <Center>
           {!bgremove && <UploadImage setImage={setImage} onSubmit={onSubmit} />}
           {bgremove && (
@@ -53,7 +58,7 @@ const HomePage = () => {
       </GridItem>
       <GridItem
         area="templates"
-        bg="gray.100"
+        bg={colorMode === "light" ? "gray.100" : "gray.600"}
         marginTop={bgremove ? "320px" : ""}
       >
         <Shapes

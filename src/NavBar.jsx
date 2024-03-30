@@ -1,11 +1,17 @@
-import { Stack, HStack, Icon, Text } from "@chakra-ui/react";
+import { Stack, HStack, Icon, Text, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { HiSquare2Stack } from "react-icons/hi2";
 
 const Header = () => {
+  const { colorMode } = useColorMode();
+
   return (
-    <Stack p={2} bg="gray.100" className="sticky-top">
+    <Stack
+      p={2}
+      bg={colorMode === "light" ? "gray.100" : "gray.600"}
+      className="sticky-top"
+    >
       <HStack justifyContent="space-between">
         <Link to="/">
           <HStack>

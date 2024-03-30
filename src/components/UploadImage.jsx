@@ -6,13 +6,16 @@ import {
   Text,
   VisuallyHiddenInput,
   Stack,
+  useColorMode,
 } from "@chakra-ui/react";
 import React from "react";
 import { IoCloudUploadOutline } from "react-icons/io5";
 
 const UploadImage = ({ setImage, onSubmit }) => {
+  const { colorMode } = useColorMode();
+
   return (
-    <Stack bg="gray.200">
+    <Stack bg={colorMode === "light" ? "gray.200" : "gray.700"}>
       <Center padding={6}>
         <Box>
           <label

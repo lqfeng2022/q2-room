@@ -1,10 +1,24 @@
-import { Box, Center, Image, List, ListItem, Stack } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Image,
+  List,
+  ListItem,
+  Stack,
+  useColorMode,
+} from "@chakra-ui/react";
 import React from "react";
 import boy from "../assets/boy.png";
 
 const PhotoBox = ({ height, width, bg, nobg, percent }) => {
+  const { colorMode } = useColorMode();
+
   return (
-    <Stack className="fixed-top" marginTop="60px" bg="gray.200">
+    <Stack
+      className="fixed-top"
+      marginTop="60px"
+      bg={colorMode === "light" ? "gray.200" : "gray.700"}
+    >
       <Center>
         <List my={3} paddingX={1}>
           <ListItem>
