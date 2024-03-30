@@ -13,11 +13,11 @@ const HomePage = () => {
   const [height, setHeight] = useState("200px");
   const [per, setPer] = useState("90%");
 
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   const onSubmit = async () => {
     const apiKey = "C9w3gdt7xjt42juKAQnMJ1JK";
-    const url = "https://api.remove.bg/v1.0/removebg"; 
+    const url = "https://api.remove.bg/v1.0/removebg";
 
     const formData = new FormData();
     formData.append("image_file", image, image.name);

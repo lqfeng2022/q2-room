@@ -1,10 +1,17 @@
-import { Stack, HStack, Icon, Text, useColorMode } from "@chakra-ui/react";
+import {
+  Stack,
+  HStack,
+  Icon,
+  Text,
+  useColorMode,
+  Button,
+} from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { HiSquare2Stack } from "react-icons/hi2";
 
 const Header = () => {
-  const { colorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Stack
@@ -16,14 +23,16 @@ const Header = () => {
         <Link to="/">
           <HStack>
             <Icon as={HiSquare2Stack} boxSize="45px" color="green.400" />
-            <Text fontSize="lg" letterSpacing="wide" m={1}>
-              Q2 STUDIO
+            <Text as="b" fontSize="lg" letterSpacing="wide" m={1}>
+              BG REMOVER
             </Text>
           </HStack>
         </Link>
-        <Text marginY={2} fontSize="sm" as="mark">
-          LI QIUFENG
-        </Text>
+        <Button onClick={toggleColorMode} variant="ghost">
+          <Text marginY={2} fontSize="sm" as="mark">
+            LI QIUFENG
+          </Text>
+        </Button>
       </HStack>
     </Stack>
   );
