@@ -1,15 +1,7 @@
 import React from "react";
 import { Box, HStack, Stack, Image, Center, Text } from "@chakra-ui/react";
 
-const ShapeStack = ({
-  shape,
-  setHeight,
-  setWidth,
-  setPer,
-  setBg,
-  nobg,
-  photo,
-}) => {
+const ShapeStack = ({ shape, setHeight, setWidth, setPer, nobg, photo }) => {
   return (
     <HStack
       spacing="15px"
@@ -25,7 +17,6 @@ const ShapeStack = ({
               setWidth(s.width);
               setHeight(s.height);
               setPer(s.per);
-              setBg("white");
             }}
           >
             <Box
