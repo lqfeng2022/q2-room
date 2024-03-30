@@ -8,12 +8,14 @@ import Background from "./components/Backgrounds";
 const HomePage = () => {
   const [image, setImage] = useState(null);
   const [bgremove, setBgremove] = useState(null);
+
   const [bg, setBg] = useState("white");
   const [width, setWidth] = useState("200px");
   const [height, setHeight] = useState("200px");
   const [per, setPer] = useState("90%");
 
   const { colorMode } = useColorMode();
+  const light = colorMode === "light";
 
   const onSubmit = async () => {
     const apiKey = "C9w3gdt7xjt42juKAQnMJ1JK";
@@ -39,10 +41,7 @@ const HomePage = () => {
 
   return (
     <Grid templateAreas={`"upload" "templates"`}>
-      <GridItem
-        area="upload"
-        bg={colorMode === "light" ? "gray.200" : "gray.700"}
-      >
+      <GridItem area="upload" bg={light ? "gray.200" : "gray.700"}>
         <Center>
           {!bgremove && <UploadImage setImage={setImage} onSubmit={onSubmit} />}
           {bgremove && (
@@ -58,7 +57,7 @@ const HomePage = () => {
       </GridItem>
       <GridItem
         area="templates"
-        bg={colorMode === "light" ? "gray.100" : "gray.600"}
+        bg={light ? "gray.100" : "gray.600"}
         marginTop={bgremove ? "320px" : ""}
       >
         <Shapes

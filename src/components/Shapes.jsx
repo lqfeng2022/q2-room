@@ -14,7 +14,7 @@ const Shapes = ({ nobg, setWidth, setHeight, setPer }) => {
       <Titles
         icon={MdOutlinePhotoSizeSelectLarge}
         title="SHAPE"
-        color="purple.500"
+        color="green.500"
       />
       <Stack>
         <Titles icon={IoSquare} title="SQUARE" color="white" />

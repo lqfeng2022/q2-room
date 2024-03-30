@@ -30,7 +30,7 @@ const Background = ({ nobg, setBg }) => {
 
   return (
     <Stack paddingY={4} marginBottom="20px">
-      <Titles icon={BsFillImageFill} title="BACKGROND" color="purple.500" />
+      <Titles icon={BsFillImageFill} title="BACKGROND" color="green.500" />
       <Stack>
         <Titles icon={IoSquare} title="BLUE" color="blue.300" />
         <ColorStack

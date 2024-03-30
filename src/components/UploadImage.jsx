@@ -43,7 +43,7 @@ const UploadImage = ({ setImage, onSubmit }) => {
               onChange={(e) => setImage(e.target.files[0])}
             />
             <Center paddingY="13px">
-              <Button colorScheme="purple" onClick={onSubmit}>
+              <Button colorScheme="green" onClick={onSubmit}>
                 Submit
               </Button>
             </Center>
