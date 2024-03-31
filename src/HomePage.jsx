@@ -25,13 +25,16 @@ const HomePage = () => {
     const apiKey = "C9w3gdt7xjt42juKAQnMJ1JK";
     const url = "https://api.remove.bg/v1.0/removebg";
 
+    const apiKey2 = "5e1ff56ab1dcca900a432c5c99854469106f1032";
+    const url2 = "https://sdk.photoroom.com/v1/segment";
+
     const formData = new FormData();
     formData.append("image_file", image, image.name);
     formData.append("size", "auto");
 
-    await fetch(url, {
+    await fetch(url2, {
       method: "POST",
-      headers: { "X-Api-Key": apiKey },
+      headers: { "x-api-key": apiKey2 },
       body: formData,
     })
       .then((res) => res.blob())
