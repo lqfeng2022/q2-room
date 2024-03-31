@@ -17,7 +17,7 @@ const PhotoBox = ({ bg, nobg, size, boxSize, setBoxSize }) => {
   return (
     <Center
       className="fixed-top"
-      mt="64px"
+      mt="63px"
       bg={colorMode === "light" ? "gray.200" : "gray.700"}
       onClick={handleBox}
     >
