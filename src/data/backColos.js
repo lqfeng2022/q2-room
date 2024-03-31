@@ -4,12 +4,12 @@ export default [
   {
     name: "blues",
     color: pureColors[7].blue,
-    image: "src/assets/girl_8.png",
+    image: "src/assets/girl_6.png",
   },
   {
     name: "reds",
     color: pureColors[2].red,
-    image: "src/assets/girl_9.png",
+    image: "src/assets/girl_7.png",
   },
   {
     name: "grays",
@@ -19,7 +19,7 @@ export default [
   {
     name: "oranges",
     color: pureColors[3].orange,
-    image: "src/assets/dog_3.png",
+    image: "src/assets/dog.png",
   },
   {
     name: "yellows",
@@ -29,26 +29,26 @@ export default [
   {
     name: "greens",
     color: pureColors[5].green,
-    image: "src/assets/girl_7.png",
+    image: "src/assets/girl_5.png",
   },
   {
     name: "teals",
     color: pureColors[6].teal,
-    image: "src/assets/girl_3.png",
+    image: "src/assets/girl_1.png",
   },
   {
     name: "cyans",
     color: pureColors[8].cyan,
-    image: "src/assets/girl_4.png",
+    image: "src/assets/girl_2.png",
   },
   {
     name: "purples",
     color: pureColors[9].purple,
-    image: "src/assets/girl_5.png",
+    image: "src/assets/girl_3.png",
   },
   {
     name: "pinks",
     color: pureColors[10].pink,
-    image: "src/assets/girl_6.png",
+    image: "src/assets/girl_4.png",
   },
 ];

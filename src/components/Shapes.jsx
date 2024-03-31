@@ -2,7 +2,7 @@ import { Stack } from "@chakra-ui/react";
 import React from "react";
 import { MdOutlinePhotoSizeSelectLarge } from "react-icons/md";
 import boy from "../assets/boy.png";
-import toy_3 from "../assets/toy_3.png";
+import toy from "../assets/toy.png";
 import shapes from "../data/shapes";
 import ShapeStack from "./ShapeStack";
 import Titles from "./Titles";
@@ -24,7 +24,7 @@ const Shapes = ({ nobg, setSize }) => {
           shape={rectangle}
           setSize={setSize}
           nobg={nobg}
-          photo={toy_3}
+          photo={toy}
         />
       </Stack>
     </Stack>
