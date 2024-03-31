@@ -16,8 +16,8 @@ const HomePage = () => {
     per: "90%",
   });
   const [boxSize, setBoxSize] = useState({
-    w: "300px",
-    h: "330px",
+    w: "150px",
+    h: "165px",
   });
   const mbSize = boxSize.w === "300px" ? "320px" : "165px";
 
