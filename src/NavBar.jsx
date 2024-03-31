@@ -12,7 +12,7 @@ import { HiSquare2Stack } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const { colorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Stack
@@ -24,7 +24,9 @@ const Header = () => {
       <HStack justifyContent="space-between">
         <Link to="/">
           <HStack>
-            <Icon as={HiSquare2Stack} boxSize="40px" color="green.400" />
+            <Button px={2} variant="ghost" onClick={toggleColorMode}>
+              <Icon as={HiSquare2Stack} boxSize="35px" color="green.400" />
+            </Button>
             <Text fontSize="xl" letterSpacing="wide" m={1}>
               Q2 ROOM
             </Text>
