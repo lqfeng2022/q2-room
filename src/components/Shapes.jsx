@@ -19,17 +19,12 @@ const Shapes = ({ nobg, setSize }) => {
         color="green.500"
       />
       <Stack>
-        <ShapeStack
-          shape={square}
-          setSize={setSize}
-          nobg={nobg}
-          photo={toy_3}
-        />
+        <ShapeStack shape={square} setSize={setSize} nobg={nobg} photo={boy} />
         <ShapeStack
           shape={rectangle}
           setSize={setSize}
           nobg={nobg}
-          photo={boy}
+          photo={toy_3}
         />
       </Stack>
     </Stack>

@@ -1,13 +1,13 @@
 import { Box, Center, Image, useColorMode } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import boy from "../assets/boy.png";
 
-const PhotoBox = ({ size, bg, nobg, boxSize, setBoxSize, boolean }) => {
+const PhotoBox = ({ bg, nobg, size, boxSize, setBoxSize }) => {
   const { colorMode } = useColorMode();
-
   const w2 = `${parseInt(size.width.slice(0, -2)) / 2}px`;
   const h2 = `${parseInt(size.height.slice(0, -2)) / 2}px`;
 
+  const boolean = boxSize.w === "300px";
   const handleBox = () => {
     setBoxSize(
       boolean ? { w: "150px", h: "165px" } : { w: "300px", h: "330px" }

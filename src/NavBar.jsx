@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <Stack
       p={3}
-      bg={colorMode === "light" ? "gray.100" : "gray.600"}
+      bg={colorMode === "light" ? "gray.100" : "gray.700"}
       className="sticky-top"
     >
       <HStack justifyContent="space-between">

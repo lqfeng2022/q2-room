@@ -3,19 +3,16 @@ import {
   Button,
   Center,
   Icon,
+  Stack,
   Text,
   VisuallyHiddenInput,
-  Stack,
-  useColorMode,
 } from "@chakra-ui/react";
 import React from "react";
 import { IoCloudUploadOutline } from "react-icons/io5";
 
 const UploadImage = ({ setImage, onSubmit }) => {
-  const { colorMode } = useColorMode();
-
   return (
-    <Stack bg={colorMode === "light" ? "gray.200" : "gray.700"}>
+    <Stack>
       <Center p={4}>
         <Box>
           <label

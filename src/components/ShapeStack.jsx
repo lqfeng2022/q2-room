@@ -16,7 +16,7 @@ const ShapeStack = ({ shape, setSize, nobg, photo }) => {
               setSize({ width: s.width, height: s.height, per: s.per });
             }}
           >
-            <Box w={s.w} h={s.h} bg="white" className={display}>
+            <Box w={s.w} h={s.h} bg="gray.100" className={display}>
               <Image src={nobg ? nobg : photo} w={s.per} />
             </Box>
           </Box>
