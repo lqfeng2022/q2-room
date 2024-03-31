@@ -16,7 +16,7 @@ const HomePage = () => {
     per: "90%",
   });
 
-  const onSubmit = async () => {
+  const handleSubmit = async () => {
     const apiKey = "C9w3gdt7xjt42juKAQnMJ1JK";
     const url = "https://api.remove.bg/v1.0/removebg";
 
@@ -45,13 +45,15 @@ const HomePage = () => {
         bg={colorMode === "light" ? "gray.200" : "gray.700"}
       >
         <Center>
-          {!bgremove && <UploadImage setImage={setImage} onSubmit={onSubmit} />}
+          {!bgremove && (
+            <UploadImage setImage={setImage} onSubmit={handleSubmit} />
+          )}
           {bgremove && <PhotoBox bg={bg} size={size} nobg={bgremove} />}
         </Center>
       </GridItem>
       <GridItem
         area="templates"
-        bg={light ? "gray.100" : "gray.600"}
+        bg={colorMode === "light" ? "gray.100" : "gray.600"}
         mt={bgremove ? "320px" : ""}
       >
         <Shapes setSize={setSize} nobg={bgremove} />
