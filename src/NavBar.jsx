@@ -1,19 +1,18 @@
 import {
-  Stack,
+  Button,
   HStack,
   Icon,
+  Stack,
   Text,
   useColorMode,
-  Button,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
-import { HiSquare2Stack } from "react-icons/hi2";
 import { FaGithub } from "react-icons/fa";
-import { FiMoon, FiSun } from "react-icons/fi";
+import { HiSquare2Stack } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <Stack
@@ -30,21 +29,11 @@ const Header = () => {
             </Text>
           </HStack>
         </Link>
-        <HStack>
-          <Button
-            px={2}
-            colorScheme="green"
-            variant="ghost"
-            onClick={toggleColorMode}
-          >
-            <Icon boxSize="22px" as={colorMode == "light" ? FiMoon : FiSun} />
+        <Link target="_blank" to="https://github.com/lqfeng2022/q2-room">
+          <Button px={2} colorScheme="green" variant="ghost">
+            <Icon boxSize="22px" as={FaGithub} />
           </Button>
-          <Link target="_blank" to="https://github.com/lqfeng2022/q2-room">
-            <Button px={2} colorScheme="green" variant="ghost">
-              <Icon boxSize="22px" as={FaGithub} />
-            </Button>
-          </Link>
-        </HStack>
+        </Link>
       </HStack>
     </Stack>
   );

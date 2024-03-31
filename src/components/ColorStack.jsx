@@ -1,24 +1,17 @@
 import React from "react";
 import { Box, Stack, HStack, Image, Center, Text } from "@chakra-ui/react";
 
-const ColorStack = ({ color, w, h, nobg, setBg, photo }) => {
+const ColorStack = ({ color, nobg, setBg, photo }) => {
+  const styles = { overflowX: "auto", width: "100vw" };
+  const display =
+    "d-flex justify-content-center align-items-end object-fit-cover";
+
   return (
-    <HStack
-      spacing="15px"
-      paddingX={3}
-      paddingY={0}
-      style={{ overflowX: "auto", maxWidth: "1400px", width: "100vw" }}
-    >
+    <HStack maxW="1400px" spacing="15px" px={3} py={2} style={styles}>
       {color.map((p) => (
         <Stack key={p.id}>
           <Box as="button" onClick={() => setBg(p.bg)}>
-            <Box
-              w={w}
-              h={h}
-              bg={p.bg}
-              style={{ objectFit: "cover" }}
-              className="d-flex justify-content-center align-items-end"
-            >
+            <Box w="100px" h="140px" bg={p.bg} className={display}>
               <Image src={nobg ? nobg : photo} />
             </Box>
           </Box>

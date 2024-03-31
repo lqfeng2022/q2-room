@@ -10,9 +10,11 @@ const HomePage = () => {
   const [bgremove, setBgremove] = useState(null);
 
   const [bg, setBg] = useState("white");
-  const [width, setWidth] = useState("200px");
-  const [height, setHeight] = useState("200px");
-  const [per, setPer] = useState("90%");
+  const [size, setSize] = useState({
+    width: "200px",
+    height: "200px",
+    per: "90%",
+  });
 
   const { colorMode } = useColorMode();
   const light = colorMode === "light";
@@ -44,15 +46,7 @@ const HomePage = () => {
       <GridItem area="upload" bg={light ? "gray.200" : "gray.700"}>
         <Center>
           {!bgremove && <UploadImage setImage={setImage} onSubmit={onSubmit} />}
-          {bgremove && (
-            <PhotoBox
-              bg={bg}
-              height={height}
-              width={width}
-              nobg={bgremove}
-              percent={per}
-            />
-          )}
+          {bgremove && <PhotoBox bg={bg} size={size} nobg={bgremove} />}
         </Center>
       </GridItem>
       <GridItem
@@ -60,12 +54,7 @@ const HomePage = () => {
         bg={light ? "gray.100" : "gray.600"}
         marginTop={bgremove ? "320px" : ""}
       >
-        <Shapes
-          setWidth={setWidth}
-          setHeight={setHeight}
-          setPer={setPer}
-          nobg={bgremove}
-        />
+        <Shapes setSize={setSize} nobg={bgremove} />
         <Background setBg={setBg} nobg={bgremove} />
       </GridItem>
     </Grid>
