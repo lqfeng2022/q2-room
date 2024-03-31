@@ -20,7 +20,7 @@ const UploadImage = ({ setImage, onSubmit }) => {
             style={{ border: "3px dashed gray" }}
             className="px-5 border-opacity-50 rounded-3"
           >
-            <Center pt="13px">
+            <Center pt="8px">
               <Icon as={IoCloudUploadOutline} color="gray" boxSize={8} />
             </Center>
             <Center py="5px">
