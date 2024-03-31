@@ -4,6 +4,7 @@ import Background from "./components/Backgrounds";
 import PhotoBox from "./components/PhotoBox";
 import Shapes from "./components/Shapes";
 import UploadImage from "./components/UploadImage";
+import apiClient from "./services/apiClient";
 
 const HomePage = () => {
   const [image, setImage] = useState(null);
@@ -22,19 +23,16 @@ const HomePage = () => {
   const mbSize = boxSize.w === "300px" ? "320px" : "165px";
 
   const handleSubmit = async () => {
-    const apiKey = "C9w3gdt7xjt42juKAQnMJ1JK";
-    const url = "https://api.remove.bg/v1.0/removebg";
-
-    const apiKey2 = "5e1ff56ab1dcca900a432c5c99854469106f1032";
-    const url2 = "https://sdk.photoroom.com/v1/segment";
+    const apiKey = apiClient[1].apiKey;
+    const url = apiClient[1].url;
 
     const formData = new FormData();
     formData.append("image_file", image, image.name);
     formData.append("size", "auto");
 
-    await fetch(url2, {
+    await fetch(url, {
       method: "POST",
-      headers: { "x-api-key": apiKey2 },
+      headers: { "x-api-key": apiKey },
       body: formData,
     })
       .then((res) => res.blob())
