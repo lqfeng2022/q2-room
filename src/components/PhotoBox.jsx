@@ -4,13 +4,12 @@ import boy from "../assets/boy.png";
 
 const PhotoBox = ({ size, bg, nobg }) => {
   const { colorMode } = useColorMode();
-  const light = colorMode === "light";
 
   return (
     <Center
       className="fixed-top"
-      marginTop="55px"
-      bg={light ? "gray.200" : "gray.700"}
+      mt="64px"
+      bg={colorMode === "light" ? "gray.200" : "gray.700"}
     >
       <Box w="300px" h="330px" className="d-flex justify-content-center">
         <Center>

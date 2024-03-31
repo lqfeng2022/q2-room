@@ -16,17 +16,17 @@ const UploadImage = ({ setImage, onSubmit }) => {
 
   return (
     <Stack bg={colorMode === "light" ? "gray.200" : "gray.700"}>
-      <Center padding={6}>
+      <Center p={6}>
         <Box>
           <label
             htmlFor="dropzone-file"
             style={{ border: "3px dashed gray" }}
             className="px-5 border-opacity-50 rounded-3"
           >
-            <Center paddingY="13px">
+            <Center py="13px">
               <Icon as={IoCloudUploadOutline} color="gray" boxSize={10} />
             </Center>
-            <Center paddingY="5px">
+            <Center py="5px">
               <Text fontSize="xl" as="b">
                 Click to Upload
               </Text>

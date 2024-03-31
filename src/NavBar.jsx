@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <Stack
-      p={2}
+      p={3}
       bg={colorMode === "light" ? "gray.100" : "gray.600"}
       className="sticky-top"
     >
