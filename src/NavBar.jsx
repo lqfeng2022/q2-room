@@ -30,7 +30,7 @@ const Header = () => {
           </HStack>
         </Link>
         <Link target="_blank" to="https://github.com/lqfeng2022/q2-room">
-          <Button px={2} colorScheme="green" variant="ghost">
+          <Button px={2} colorScheme="gray" variant="ghost">
             <Icon boxSize="22px" as={FaGithub} />
           </Button>
         </Link>

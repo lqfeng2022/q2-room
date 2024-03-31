@@ -2,12 +2,12 @@ import React from "react";
 import { Box, HStack, Stack, Image, Center, Text } from "@chakra-ui/react";
 
 const ShapeStack = ({ shape, setSize, nobg, photo }) => {
-  const styles = { overflowX: "auto", width: "100vw" };
+  const styles = { overflowX: "auto", maxWidth: "1400px", width: "100vw" };
   const display =
     "d-flex justify-content-center align-items-end object-fit-cover";
 
   return (
-    <HStack spacing="15px" maxW="1400px" px={3} py={2} style={styles}>
+    <HStack spacing="15px" px={3} py={2} style={styles}>
       {shape.map((s) => (
         <Stack key={s.id}>
           <Box

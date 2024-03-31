@@ -16,23 +16,25 @@ const UploadImage = ({ setImage, onSubmit }) => {
 
   return (
     <Stack bg={colorMode === "light" ? "gray.200" : "gray.700"}>
-      <Center p={6}>
+      <Center p={4}>
         <Box>
           <label
             htmlFor="dropzone-file"
             style={{ border: "3px dashed gray" }}
             className="px-5 border-opacity-50 rounded-3"
           >
-            <Center py="13px">
-              <Icon as={IoCloudUploadOutline} color="gray" boxSize={10} />
+            <Center pt="13px">
+              <Icon as={IoCloudUploadOutline} color="gray" boxSize={8} />
             </Center>
             <Center py="5px">
-              <Text fontSize="xl" as="b">
+              <Text fontSize="lg" as="b">
                 Click to Upload
               </Text>
             </Center>
             <Center>
-              <Text fontSize="small">PNG, JPG/JPEG or WEBP (MAX. 10MB)</Text>
+              <Text mb={2} fontSize="xs">
+                PNG, JPG/JPEG or WEBP (MAX. 10MB)
+              </Text>
             </Center>
             <VisuallyHiddenInput
               id="dropzone-file"
@@ -42,8 +44,8 @@ const UploadImage = ({ setImage, onSubmit }) => {
               className="hidden"
               onChange={(e) => setImage(e.target.files[0])}
             />
-            <Center paddingY="13px">
-              <Button colorScheme="green" onClick={onSubmit}>
+            <Center py="8px">
+              <Button size="sm" colorScheme="green" onClick={onSubmit}>
                 Submit
               </Button>
             </Center>

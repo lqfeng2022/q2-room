@@ -7,7 +7,7 @@ import Titles from "./Titles";
 
 const Background = ({ nobg, setBg }) => {
   return (
-    <Stack paddingY={4} marginBottom="20px">
+    <Stack px={1} py={2} mb="20px">
       <Titles icon={BsFillImageFill} title="BACK_COLOR" color="green.500" />
       <Stack>
         {backColors.map((c) => (
@@ -15,8 +15,8 @@ const Background = ({ nobg, setBg }) => {
             key={c.name}
             color={c.color}
             setBg={setBg}
-            photo={c.image}
             nobg={nobg}
+            photo={c.image}
           />
         ))}
       </Stack>

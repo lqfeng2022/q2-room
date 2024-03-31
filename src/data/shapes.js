@@ -1,13 +1,13 @@
 export default [
   {
     id: 0,
-    name: "SHAPE TREE",
+    name: "square",
     content: [
       {
         id: 0,
         title: "45*45mm",
-        w: "150px",
-        h: "150px",
+        w: "100px",
+        h: "100px",
         width: "220px",
         height: "220px",
         per: "90%",
@@ -15,8 +15,8 @@ export default [
       {
         id: 1,
         title: "50*50mm",
-        w: "150px",
-        h: "150px",
+        w: "100px",
+        h: "100px",
         width: "240px",
         height: "240px",
         per: "90%",
@@ -25,7 +25,7 @@ export default [
   },
   {
     id: 1,
-    name: "SHAPE ONE",
+    name: "rectangle",
     content: [
       {
         id: 0,

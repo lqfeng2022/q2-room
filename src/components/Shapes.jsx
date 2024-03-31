@@ -8,8 +8,11 @@ import ShapeStack from "./ShapeStack";
 import Titles from "./Titles";
 
 const Shapes = ({ nobg, setSize }) => {
+  const square = shapes[0].content;
+  const rectangle = shapes[1].content;
+
   return (
-    <Stack paddingY={4}>
+    <Stack px={1} py={2}>
       <Titles
         icon={MdOutlinePhotoSizeSelectLarge}
         title="SIZE"
@@ -17,14 +20,14 @@ const Shapes = ({ nobg, setSize }) => {
       />
       <Stack>
         <ShapeStack
+          shape={square}
           setSize={setSize}
-          shape={shapes[0].content}
           nobg={nobg}
           photo={toy_3}
         />
         <ShapeStack
+          shape={rectangle}
           setSize={setSize}
-          shape={shapes[1].content}
           nobg={nobg}
           photo={boy}
         />
