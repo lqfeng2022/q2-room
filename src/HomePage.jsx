@@ -32,7 +32,7 @@ const HomePage = () => {
 
     await fetch(url, {
       method: "POST",
-      headers: { "x-api-key": apiKey },
+      headers: { "X-Api-Key": apiKey },
       body: formData,
     })
       .then((res) => res.blob())
