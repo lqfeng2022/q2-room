@@ -23,8 +23,8 @@ const HomePage = () => {
   const mbSize = boxSize.w === "300px" ? "320px" : "165px";
 
   const handleSubmit = async () => {
-    const apiKey = apiClient[0].apiKey;
-    const url = apiClient[0].url;
+    const apiKey = apiClient[1].apiKey;
+    const url = apiClient[1].url;
 
     const formData = new FormData();
     formData.append("image_file", image, image.name);
@@ -32,7 +32,7 @@ const HomePage = () => {
 
     await fetch(url, {
       method: "POST",
-      headers: { "X-Api-Key": apiKey },
+      headers: { "x-api-key": apiKey },
       body: formData,
     })
       .then((res) => res.blob())
