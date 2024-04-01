@@ -1,7 +1,7 @@
 export default [
   {
     name: "remove_bg",
-    apiKey: "C9w3gdt7xjt42juKAQnMJ1JK",
+    apiKey: "iBLp2CAaooYiekZKH9vDjdAq",
     url: "https://api.remove.bg/v1.0/removebg",
   },
   {
